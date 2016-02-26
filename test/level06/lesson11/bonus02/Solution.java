@@ -73,6 +73,15 @@ public class Solution
         {
             this.name = name;
         }
+        
+        /*
+Если конструктор не менять, то на выходе будет получаться нечто вроде
+Cat name is мама Василиса, no mother, father is бабушка Василиса
+Поэтому меняем коструктор из
+Cat(String name,Cat mother, Cat father)
+в 
+Cat(String name,Cat father, Cat mother)
+*/
 
         Cat(String name,Cat father, Cat mother)
         {
