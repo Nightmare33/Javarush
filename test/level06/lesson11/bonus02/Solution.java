@@ -39,6 +39,14 @@ public class Solution
 
         String fatherName = reader.readLine();
         String motherName = reader.readLine();
+        
+        /* Новое задание предполагает изменение создаваемых объектов. теперь за именем кошки должен следоваь ее отец (а не мать, как раньше)
+        Пример:
+        Сat catFather = new Cat(fatherName,null, catGrandpa); - тестирование не пройдет
+        Cat catFather = new Cat(fatherName,catGrandpa, null); - пройдет
+        Но после этих изменений нужно поменять конструктор (см. ниже)
+        */
+        
         Cat catFather = new Cat(fatherName,catGrandpa, null);
         Cat catMother = new Cat(motherName,null, catGrandma);
 
